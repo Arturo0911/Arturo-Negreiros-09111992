@@ -78,6 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'country-currency',
+        
     }
 }
 
