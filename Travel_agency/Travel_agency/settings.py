@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Currency_formats',
+    'rest_framework',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+#REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
 ROOT_URLCONF = 'Travel_agency.urls'
 
 TEMPLATES = [
@@ -74,13 +76,15 @@ WSGI_APPLICATION = 'Travel_agency.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'country-currency',
-        
-    }
-}
+from mongoengine import *
+connect("currency-new" , host='127.0.0.1', port = 27017)
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'djongo',
+#        'NAME': 'country-currency',
+#        
+#    }
+#}
 
 
 # Password validation
@@ -125,3 +129,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
