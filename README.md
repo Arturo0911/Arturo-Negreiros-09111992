@@ -29,6 +29,7 @@ Insert new country
 {
 "country_name": "Argentina",
 "country_price": 1250.50,
+"country_status": "ACTIVE"
 "currency": [
     {
         "currency_symbol": "USD",
