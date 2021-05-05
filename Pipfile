@@ -5,10 +5,9 @@ name = "pypi"
 
 [packages]
 django = "*"
-djongo = "*"
 mongoengine = "*"
-django-rest-swagger = "*"
 django-rest-framework-mongoengine = "*"
+drf-yasg = "*"
 
 [dev-packages]
 
