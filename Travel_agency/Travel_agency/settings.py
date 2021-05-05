@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-za9pd%gf5%58usvrx^9#z#9se$amhatrm$g&rc(_z_+obw@icj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0'
+]
 
 
 # Application definition
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'Travel_agency.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 from mongoengine import *
-connect("currency-new" , host='127.0.0.1', port = 27017)
+connect("currency-new" , host='mongo', port = 27017)
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'djongo',
